@@ -133,7 +133,7 @@ class PostsController {
 
   public async searchPost(req: Request, res: Response): Promise<Response> {
     try {
-      const results = await AppDataSource.query( 'SELECT id, text FROM posts WHERE text LIKE "%' + req.query.text +'%"');
+      const results = await AppDataSource.query( 'SELECT id, title FROM posts WHERE title LIKE "%' + req.query.title +'%"');
       return res
         .status(200)
         .json(results)
