@@ -1,0 +1,1 @@
+CREATE DATABASE 'spa_db';
